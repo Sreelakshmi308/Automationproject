@@ -5,6 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+/*Take Home page,enter keywords,destination and duration.
+ * Click search button
+ * Navigate back to home page
+ */
 public class Homepage {
 	WebDriver driver;
 	By keywords=By.name("tour-search");

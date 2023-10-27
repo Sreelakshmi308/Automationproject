@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
+/*Click on Visa option in the Home page.
+ * Scroll down and select Dubai from the page.
+ * Navigate back to the Home page.
+ */
 public class Visapage {
 	WebDriver driver;
 	By visa=By.xpath("//*[@id=\"menu-primary-menu-1\"]/li[6]/a");

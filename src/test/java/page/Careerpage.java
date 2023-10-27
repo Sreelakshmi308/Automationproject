@@ -10,7 +10,11 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-
+/*Careers page is selected from the home page and scrolled down to enter the Join Our Team with data.
+ * Here name,email,contact number and position is given.
+ * Your cv field has bugs in it and is not working.
+ * Hence,it is not possible to upload cv and so submit button is also showing error.
+ */
 public class Careerpage {
 	WebDriver driver;
 	By career=By.xpath("//*[@id=\"menu-primary-menu-1\"]/li[7]/a");
@@ -18,9 +22,7 @@ public class Careerpage {
 	By youremail=By.name("your-email");
 	By yourcontact=By.xpath("//body/div[@id='mm-0']/div[1]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/form[1]/div[2]/div[4]/label[1]/span[1]/input[1]");
 	By yourposition=By.name("your-position");
-	By yourcv=By.xpath("//body/div[@id='mm-0']/div[1]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/form[1]/div[2]/div[8]/label[1]/span[1]/input[1]");
-	By submitnow=By.xpath("//*[@id=\"wpcf7-f6250-p6251-o1\"]/form/div[2]/div[9]/input");
-	public Careerpage(WebDriver driver)
+	public Careerpage(WebDriver driver)//constructor
 	{
 		this.driver=driver;
 	}
@@ -35,23 +37,6 @@ public class Careerpage {
 		driver.findElement(yourcontact).sendKeys(ycontact);
 		driver.findElement(yourposition).sendKeys(yposition);
 		Thread.sleep(2000);
-		driver.findElement(yourcv).click();
-		fileUpload("\C:\Users\HP\Do);
-		driver.findElement(submitnow).click();
+		driver.navigate().back();
 	}
-	public void fileUpload(String p) throws AWTException {
-		// TODO Auto-generated method stub
-		StringSelection str=new StringSelection(p);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
-		Robot robot=new Robot();
-		robot.delay(3000);
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_V);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-	}
-
 }

@@ -8,6 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+/*At the home page mouse hover at the Soman's care option and click About us.
+ * Navigate back to the Home page.
+ * At Home page,mouse hover at the World option and click Europe.
+ * Scroll down to the bottom of the page and select the next page.
+ * Navigate back to the first page and then to the Home page.
+ * Options in the Europe page is not selected since this is an active website and hence the tour packages shown are subject to change.
+ */
 public class Careworld {
 	WebDriver driver;
 	By mouse=By.xpath("//*[@id=\"menu-primary-menu-1\"]/li[2]/a");

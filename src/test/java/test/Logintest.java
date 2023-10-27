@@ -8,6 +8,9 @@ import org.testng.annotations.Test;
 
 import page.Careerpage;
 import page.Careworld;
+import page.Contactpage;
+import page.Facebookpage;
+import page.Gallerypage;
 import page.Homepage;
 import page.Visapage;
 
@@ -35,5 +38,11 @@ public class Logintest {
 		ob3.visadetails();
 		Careerpage ob4=new Careerpage(driver);
 		ob4.tocareer("sreelakshmi","sree","abc","tester");
+		Gallerypage ob5=new Gallerypage(driver);
+		ob5.galleryview();
+		Contactpage ob6=new Contactpage(driver);
+		ob6.contactdetails("Sreelakshmi", "ssreelakshmi308@gmail.com", "Testing", "Hi");
+		Facebookpage ob7=new Facebookpage(driver);
+		ob7.fbpage();
 	}
 }
